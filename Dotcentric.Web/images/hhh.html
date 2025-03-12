@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Logos Slider</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        /* Add your custom CSS here */
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .brand-logo {
+            width: 100px; /* Adjust as needed */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="logo1.png" alt="Brand Logo 1" class="brand-logo">
+        </div>
+        <div class="swiper-slide">
+            <img src="logo2.png" alt="Brand Logo 2" class="brand-logo">
+        </div>
+        <div class="swiper-slide">
+            <img src="logo3.png" alt="Brand Logo 3" class="brand-logo">
+        </div>
+        <!-- Add more slides as needed -->
+    </div>
+    <!-- Add Pagination if needed -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation if needed -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<script>
+    import Swiper from 'swiper/swiper-bundle.min.js';
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            loop: true,
+        });
+    });
+</script>
+
+</body>
+</html>
