@@ -44,7 +44,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Preview\" />
-    <Folder Include="Views\Shared\DisplayTemplates\" />
   </ItemGroup>
   
   <ItemGroup>

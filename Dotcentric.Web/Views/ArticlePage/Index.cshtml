@@ -1,0 +1,6 @@
+﻿@model PageViewModel<ArticlePage>
+
+@if (Model.CurrentPage.BlockContent != null)
+{
+    Html.RenderContent(Model.CurrentPage.BlockContent);
+})

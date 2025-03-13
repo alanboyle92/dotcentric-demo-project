@@ -21,6 +21,14 @@ namespace Dotcentric.Website.Rendering
                 TemplateTypeCategory = TemplateTypeCategories.MvcPartialView,
                 Path = BlockPath("HeroBlock.cshtml")
             });
+
+            viewTemplateModelRegistrator.Add(typeof(RichTextBlock), new TemplateModel
+            {
+                Name = "RichTextBlock",
+                AvailableWithoutTag = true,
+                TemplateTypeCategory = TemplateTypeCategories.MvcPartialView,
+                Path = BlockPath("RichTextBlock.cshtml")
+            });
         }
 
         private static string BlockPath(string fileName)
