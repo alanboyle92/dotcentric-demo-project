@@ -2,6 +2,8 @@ namespace Dotcentric.Website;
 
 using Baaijte.Optimizely.ImageSharp.Web;
 using Baaijte.Optimizely.ImageSharp.Web.Providers;
+using Dotcentric.Infrastructure.Service;
+using Dotcentric.Infrastructure.Services;
 using EPiServer.Cms.Shell;
 using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Scheduler;
@@ -35,6 +37,8 @@ public class Startup
 
             services.Configure<SchedulerOptions>(options => options.Enabled = false);
         }
+
+        services.AddHttpClient<IProductService, ProductService>();
 
         services.AddRouting();
         services.AddHttpContextAccessor();

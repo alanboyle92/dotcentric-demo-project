@@ -3,7 +3,7 @@ using EPiServer.Framework.Web;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Mvc;
 
-namespace Dotcentric.Website.Business.Rendering
+namespace Dotcentric.Website.Rendering
 {
     [ServiceConfiguration(typeof(IViewTemplateModelRegistrator))]
     public class TemplateCoordinator : IViewTemplateModelRegistrator
