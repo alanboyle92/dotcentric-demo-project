@@ -5,14 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>@Model.MetaData.MetaTags.MetaTitle</title>
+    <title>@Model.CurrentPage.MetaData.MetaTags.MetaTitle</title>
 
-    @if (!string.IsNullOrWhiteSpace(Model.MetaData.MetaTags.MetaDescription))
+    @if (!string.IsNullOrWhiteSpace(Model.CurrentPage.MetaData.MetaTags.MetaDescription))
     {
-        <meta name="description" content="@Model.MetaData.MetaTags.MetaDescription" />
+        <meta name="description" content="@Model.CurrentPage.MetaData.MetaTags.MetaDescription" />
     }
 
-    @if (!Model.IsErrorPage)
+    @if (!Model.CurrentPage.IsErrorPage)
     {
         @Html.CanonicalLink()
         @Html.AlternateLinks()

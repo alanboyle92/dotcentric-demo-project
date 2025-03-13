@@ -7,5 +7,7 @@ namespace Dotcentric.Infrastructure.Service
         Task<List<Product>> GetCardsByPriceRange(string priceMin, string priceMax);
 
         Task<List<Product>> GetCardsByCategoryId(string categoryId);
+
+        Task<Product> GetProductById(string productId);
     }
 }

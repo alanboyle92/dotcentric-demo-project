@@ -42,5 +42,19 @@ namespace Dotcentric.Infrastructure.Services
 
             return new List<Product>();
         }
+
+        public async Task<Product> GetProductById(string productId)
+        {
+            var response = await _httpClient.GetAsync($"https://api.escuelajs.co/api/v1/products/{productId}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                var product = JsonSerializer.Deserialize<Product>(jsonString);
+                return product;
+            }
+
+            return null;
+        }
     }
 }

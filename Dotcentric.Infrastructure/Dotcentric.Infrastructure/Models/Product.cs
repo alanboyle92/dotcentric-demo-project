@@ -10,6 +10,8 @@ namespace Dotcentric.Infrastructure.Models
         public string? Description { get; set; }
         [JsonPropertyName("images")]
         public List<string>? Images { get; set; }
+        [JsonPropertyName("price")]
+        public int? Price { get; set; }
 
         public string Image
         {
