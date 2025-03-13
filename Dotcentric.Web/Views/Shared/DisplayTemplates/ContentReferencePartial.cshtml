@@ -1,0 +1,7 @@
+﻿@using Dotcentric.Website.Rendering
+@model ContentReference
+
+@if (!ContentReference.IsNullOrEmpty(Model))
+{
+    Html.RenderContent(Model);
+}

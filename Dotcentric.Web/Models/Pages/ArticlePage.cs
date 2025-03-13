@@ -4,7 +4,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Dotcentric.Website.Models.Pages
 {
-    [ContentType(DisplayName = "Article Page", GUID = "cd28ffa9-b558-4796-a89e-32f489a0fd9f")]
+    [ContentType(DisplayName = "Article Page", GUID = "cd28ffa9-b558-4796-a89e-32f489a0fd9f",
+        Description = "Article Page to display content")]
     public class ArticlePage : SitePageData
     {
         [Display(Name = "Main Content", GroupName = SystemTabNames.Content, Order = 10)]

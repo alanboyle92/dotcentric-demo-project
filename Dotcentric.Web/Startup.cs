@@ -43,6 +43,16 @@ public class Startup
 
         services.AddHttpClient<IProductService, ProductService>();
 
+        services.AddMvc(options =>
+        {
+            options.Filters.Add(new ResponseCacheAttribute
+            {
+                Duration = 3600,
+                Location = ResponseCacheLocation.Any,
+                NoStore = false
+            });
+        });
+
         services.AddRouting();
         services.AddHttpContextAccessor();
         services.AddScoped<IUrlHelper>(x =>

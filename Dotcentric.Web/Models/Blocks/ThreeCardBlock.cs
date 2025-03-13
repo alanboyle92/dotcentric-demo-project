@@ -6,7 +6,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Dotcentric.Website.Models.Blocks
 {
-    [ContentType(DisplayName = "Three Card Block", GUID = "c718fe84-7056-4ba2-9e42-170c7e8a940d")]
+    [ContentType(DisplayName = "Three Card Block", GUID = "c718fe84-7056-4ba2-9e42-170c7e8a940d",
+        Description = "Displays three product cards either manual or from api")]
     public class ThreeCardBlock : BlockData
     {
         [Display(Name = "Product Cards")]
@@ -22,6 +23,7 @@ namespace Dotcentric.Website.Models.Blocks
         [RegularExpression(@"^\d+(\.\d+)?$", ErrorMessage = "Please enter a valid number.")]
         public virtual string? PriceMax { get; set; }
 
+        [Display(Name = "Category ID")]
         [RegularExpression(@"^\d+(\.\d+)?$", ErrorMessage = "Please enter a valid number.")]
         public virtual string? CategoryID { get; set; }
 

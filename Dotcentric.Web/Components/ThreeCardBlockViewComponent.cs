@@ -46,7 +46,7 @@ namespace Dotcentric.Website.Components
                     .GetCardsByPriceRange(currentBlock.PriceMin, currentBlock.PriceMax)
                     .GetAwaiter().GetResult();
             }
-            else
+            else if (currentBlock.CategoryID != null)
             {
                 viewModel.Products = _productService
                     .GetCardsByCategoryId(currentBlock.CategoryID)

@@ -3,7 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Dotcentric.Website.Models.Blocks
 {
-    [ContentType(DisplayName = "Hero Block", GUID = "5702f132-40e1-45e4-8ba9-6a2badc914cd")]
+    [ContentType(DisplayName = "Hero Block", GUID = "5702f132-40e1-45e4-8ba9-6a2badc914cd",
+        Description = "Hero Block to be displayed as header for page")]
     public class HeroBlock : BlockData
     {
         [Display(Name = "Headline", Order = 100)]

@@ -54,7 +54,7 @@ namespace Dotcentric.Infrastructure.Services
                 return product;
             }
 
-            return null;
+            return new Product();
         }
     }
 }
