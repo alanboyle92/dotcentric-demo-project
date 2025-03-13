@@ -1,0 +1,15 @@
+﻿@model HeroBlock
+
+<section style="background: url('@Url.ContentUrl(Model.Image)') center/cover no-repeat; color: white; text-align: center; padding: 50px;">
+    <div class="hero-content">
+        @if (!string.IsNullOrWhiteSpace(Model.Headline))
+        {
+            <h1>@Model.Headline</h1>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(Model.Description))
+        {
+            <p>@Model.Description</p>
+        }
+    </div>
+</section>
